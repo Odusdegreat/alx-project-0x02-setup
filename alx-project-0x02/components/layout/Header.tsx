@@ -6,15 +6,13 @@ const Header = () => {
   const router = useRouter();
 
   // Hide header on these routes
-  const isHiddenRoute = ["/login", "/register", "/about"].includes(
-    router.pathname
-  );
+  const isHiddenRoute = ["/login", "/register"].includes(router.pathname);
 
-  // Optional effect: log or act when user navigates to /about
+  // Optional: do something when user navigates to /home
   useEffect(() => {
-    if (router.pathname === "/about") {
-      console.log("User navigated to /about");
-      // You can do more things here if needed
+    if (router.pathname === "/home") {
+      console.log("User navigated to /home");
+      // Add any logic you want here (e.g., analytics, UI changes, etc.)
     }
   }, [router.pathname]);
 
@@ -24,8 +22,8 @@ const Header = () => {
     <header>
       <h1>My Header</h1>
       <nav>
-        <Link href="/">Home</Link> | <Link href="/about">About</Link> |{" "}
-        <Link href="/contact">Contact</Link>
+        <Link href="/">Root</Link> | <Link href="/home">Home</Link> |{" "}
+        <Link href="/about">About</Link>
       </nav>
     </header>
   );
