@@ -1,24 +1,13 @@
 // components/common/Card.tsx
 
-import { ReactNode } from "react";
-import classNames from "classnames";
+import React from "react";
+import { type CardProps } from "@/interfaces";
 
-interface CardProps {
-  children: ReactNode;
-  className?: string;
-  onClick?: () => void;
-}
-
-const Card = ({ children, className, onClick }: CardProps) => {
+const Card: React.FC<CardProps> = ({ title, content, ...rest }) => {
   return (
-    <div
-      onClick={onClick}
-      className={classNames(
-        "rounded-2xl shadow-md bg-white dark:bg-zinc-900 p-4 transition duration-300 hover:shadow-lg",
-        className
-      )}
-    >
-      {children}
+    <div {...rest} className="border p-4 rounded shadow-sm">
+      <h2 className="text-xl font-semibold mb-2">{title}</h2>
+      <p className="text-gray-700">{content}</p>
     </div>
   );
 };
