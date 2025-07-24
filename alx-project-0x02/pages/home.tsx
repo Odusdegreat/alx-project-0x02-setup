@@ -1,18 +1,16 @@
-// pages/home.tsx
-
 import React from "react";
-import Card from "@/components/common/Card";
+import Header from "@/components/layout/Header";
 
-const Home = () => {
+const HomePage = () => {
   return (
-    <main className="p-8">
-      <h1 className="text-3xl font-bold mb-6">Welcome to the Home Page</h1>
-      <Card
-        title="Introduction to EduChain"
-        content="EduChain is a decentralized student management system built for transparency and security."
-      />
-    </main>
+    <>
+      <Header />
+      <main className="p-4">
+        <h1 className="text-2xl font-bold">Welcome to the Home Page</h1>
+        <p>This is the homepage of our project.</p>
+      </main>
+    </>
   );
 };
 
-export default Home;
+export default HomePage;
