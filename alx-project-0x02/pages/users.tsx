@@ -14,8 +14,8 @@ const UsersPage = ({ users }: UsersPageProps) => {
       <main className="p-4">
         <h1 className="text-2xl font-bold mb-4">Users</h1>
         <div className="grid gap-4">
-          {users.map((user, index) => (
-            <UserCard key={index} {...user} />
+          {users.map((user) => (
+            <UserCard key={user.id} {...user} />
           ))}
         </div>
       </main>
