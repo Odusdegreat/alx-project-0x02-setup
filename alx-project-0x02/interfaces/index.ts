@@ -17,5 +17,5 @@ export interface PostProps {
   userId: number;
   id?: number;
   title: string;
-  content: string;
+  body: string; // Corrected from 'content' to 'body' to match API
 }
