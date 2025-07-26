@@ -1,5 +1,5 @@
 import React from "react";
-import Header from "@/components/layout/Header";
+import Header from "@/components/layouts/Header";
 import UserCard from "@/components/common/UserCard";
 import { UserProps } from "@/interfaces";
 
